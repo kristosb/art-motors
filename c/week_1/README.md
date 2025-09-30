@@ -9,11 +9,11 @@ int ptr_b, *ptr_a;   // First not pointer, second is pointer
 int *ptr_a, *ptr_b;  // Both pointers, safest way  
 
 ## Dereferencing
-int bar = *foo_ptr;
-*foo_ptr = 42; Sets foo to 42
+int bar = *foo_ptr;  
+*foo_ptr = 42; Sets foo to 42  
 
 ## Arrays
-int array[] = { 45, 67, 89 };  
+int array[] = { 45, 67, 89 };    
 
 int *array_ptr = array;  
 printf(" first element: %i\n", *(array_ptr++));  
