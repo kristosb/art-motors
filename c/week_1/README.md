@@ -10,7 +10,7 @@ int *ptr_a, *ptr_b;  // Both pointers, safest way
 
 ## Dereferencing
 int bar = *foo_ptr;  
-*foo_ptr = 42; Sets foo to 42  
+*foo_ptr = 42; //Sets foo to 42  
 
 ## Arrays
 int array[] = { 45, 67, 89 };    
