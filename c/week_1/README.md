@@ -66,6 +66,27 @@ size_t strlen(const char *str) { //Note the pointer syntax here
 	return len;  
 }  
 
+## Function pointers
+enum { str_length = 18U }; //Remember the NUL terminator!  
+char src[str_length] = "This is a string.", dst[str_length];  
+
+strcpy(dst, src); //The function call operator in action (notice the function pointer on the left side).  
+
+char *strcpy(char *dst, const char *src); //An ordinary function declaration, for reference  
+char *(*strcpy_ptr)(char *dst, const char *src); //Pointer to strcpy-like function  
+
+strcpy_ptr =  strcpy;   
+strcpy_ptr = &strcpy; //This works too  
+strcpy_ptr = &strcpy[0]; //But not this  
+
+typedef char *(*strcpy_funcptr)(char *, const char *);  // using typedef is cleaner
+
+strcpy_funcptr strcpy_ptr = strcpy;  
+ 
+
+
+
+
 
 
 
